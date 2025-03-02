@@ -37,14 +37,15 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './docs/docs/sidebars.ts', // './sidebars.ts',
-          path: 'docs/docs',
-          routeBasePath: 'docs',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        docs: false,
+        // docs: {
+        //   path: 'docs',
+        //   routeBasePath: 'docs',
+        //   sidebarPath: require.resolve('./sidebars.ts'),
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        // },
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -68,6 +69,31 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'bareDesign',
+        path: 'docs/bare-design/docs',
+        routeBasePath: 'bare-design',
+        sidebarPath: require.resolve('./docs/bare-design/sidebars.ts'),
+        // remarkPlugins: [],
+        // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      }
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'tutorial',
+        path: 'docs/tutorial/docs',
+        routeBasePath: 'tutorial',
+        sidebarPath: require.resolve('./docs/tutorial/sidebars.ts'),
+        // remarkPlugins: [],
+        // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+      }
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/social-card.jpg',
@@ -78,18 +104,66 @@ const config: Config = {
         src: 'img/logo.svg',
       },
       items: [
+        // Left Nav
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          to: '/bare-design',
+          label: 'Bare Design',
           position: 'left',
-          label: 'Tutorial',
+          // activeBaseRegex: `/bare-design/`,
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          type: 'dropdown',
+          label: 'Collections',
+          position: 'left',
+          items: [
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+          ],
         },
+        // Right Nav
+        {
+          type: 'dropdown',
+          label: 'Community',
+          position: 'right',
+          items: [
+            {
+              label: 'Tutorial',
+              to: '/tutorial/intro',
+            },
+            // {
+            //   label: 'Tutorial',
+            //   type: 'docSidebar',
+            //   sidebarId: 'docsSidebar',
+            // },
+            // {
+            //   type: 'doc',
+            //   docId: 'intro', // The ID of the first doc in `instance-one`
+            //   docPluginId: 'docs', // Must match the `id` in your plugin config
+            //   label: 'Tutorial',
+            // },
+            {
+              label: 'Blog',
+              to: '/blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/randellqt',
+            },
+            {
+              label: 'Instagram',
+              href: 'https://www.instagram.com/randellqt',
+            },
+            // {
+            //   type: 'doc',
+            //   label: 'Social',
+            //   docId: 'social',
+            // },
+            // ... more items
+          ],
+        },
+
       ],
     },
     footer: {
