@@ -1,0 +1,36 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@import "./preflight.ext.css";
+@import "./utilities.ext.css";
+/* @import "../../plugins/styles/index"; */
+@import "./custom.docusaurus.css";
+
+
+/*
+@layer components {
+  .navbar {
+    @apply sticky;
+  }
+}
+
+
+#mprogressBuffer,
+#mprogressDeterminate,
+#mprogressIndeterminate {
+  height: 5px;
+  width: 100%;
+}
+
+#mprogressBuffer .deter-bar,
+#mprogressDeterminate .deter-bar,
+#mprogressIndeterminate .indeter-bar {
+  background: url(/img/rainbow-bar.gif) 100%;
+}
+*/

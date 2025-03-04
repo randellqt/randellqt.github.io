@@ -1,0 +1,16 @@
+@layer base {
+  table {
+    @apply table mb-0;
+  }
+
+  img,
+  svg,
+  video,
+  canvas,
+  audio,
+  iframe,
+  embed,
+  object {
+    @apply inline;
+  }
+}

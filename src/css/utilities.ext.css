@@ -1,0 +1,46 @@
+
+@theme inline {
+  --color-red: var(--color-red-600);
+  --color-orange: var(--color-orange-600);
+  --color-amber: var(--color-amber-600);
+  --color-yellow: var(--color-yellow-600);
+  --color-lime: var(--color-lime-600);
+  --color-green: var(--color-green-600);
+  --color-emerald: var(--color-emerald-600);
+  --color-teal: var(--color-teal-600);
+  --color-cyan: var(--color-cyan-600);
+  --color-sky: var(--color-sky-600);
+  --color-blue: var(--color-blue-600);
+  --color-indigo: var(--color-indigo-600);
+  --color-violet: var(--color-violet-600);
+  --color-purple: var(--color-purple-600);
+  --color-fuchsia: var(--color-fuchsia-600);
+  --color-pink: var(--color-pink-600);
+  --color-rose: var(--color-rose-600);
+  --color-slate: var(--color-slate-600);
+  --color-gray: var(--color-gray-600);
+  --color-zinc: var(--color-zinc-600);
+  --color-neutral: var(--color-neutral-600);
+  --color-stone: var(--color-stone-600);
+}
+
+@layer utilities {
+  .visible {
+    visibility: visible;
+  }
+  .invisible {
+    visibility: hidden;
+  }
+}
+
+@layer utilities {
+  .page-static {
+    @apply static z-auto overflow-visible;
+    contain: none;
+  }
+
+  .page-overlay {
+    @apply absolute z-1040 overflow-visible;
+    contain: none;
+  }
+}
