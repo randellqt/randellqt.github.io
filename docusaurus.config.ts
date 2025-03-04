@@ -63,7 +63,9 @@ const config: Config = {
           onUntruncatedBlogPosts: 'warn',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            './src/css/base.css',
+          ],
         },
       } satisfies Preset.Options,
     ],
@@ -215,6 +217,9 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       // additionalLanguages: [ 'bash', 'diff', 'json', 'powershell' ],
+    },
+    customFields: {
+      email: 'randelljy@gmail.com',
     },
   } satisfies Preset.ThemeConfig,
 };
