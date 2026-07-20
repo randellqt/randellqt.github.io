@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mock API — randellqt.github.io</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #c9d1d9;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --green: #3fb950;
+      --orange: #d29922;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 900px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 3rem; }
+    header h1 { font-size: 2.2rem; color: #fff; margin-bottom: .5rem; }
+    header p { color: var(--muted); font-size: 1rem; }
+    header a { color: var(--accent); text-decoration: none; }
+    header a:hover { text-decoration: underline; }
+
+    .badge {
+      display: inline-block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 2em;
+      padding: .2em .8em;
+      font-size: .8rem;
+      color: var(--green);
+      margin-top: .5rem;
+    }
+
+    h2 { font-size: 1.3rem; margin: 2rem 0 1rem; border-bottom: 1px solid var(--border); padding-bottom: .4rem; color: #fff; }
+
+    .resources {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+      gap: .75rem;
+      margin-bottom: 2rem;
+    }
+    .resource-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+    .resource-card .count { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    .resource-card .name  { font-size: .85rem; color: var(--muted); margin-top: .2rem; }
+
+    .route-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    .route-table th { text-align: left; padding: .5rem .75rem; border-bottom: 2px solid var(--border); color: var(--muted); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; }
+    .route-table td { padding: .5rem .75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .route-table tr:last-child td { border-bottom: none; }
+    .route-table tr:hover td { background: var(--surface); }
+
+    code {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: .1em .4em;
+      font-size: .85em;
+      color: var(--accent);
+    }
+    .method {
+      display: inline-block;
+      font-family: monospace;
+      font-size: .75rem;
+      font-weight: 700;
+      padding: .15em .5em;
+      border-radius: 4px;
+      background: rgba(63,185,80,.15);
+      color: var(--green);
+      border: 1px solid rgba(63,185,80,.3);
+    }
+
+    .note {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 4px;
+      padding: 1rem 1.2rem;
+      font-size: .9rem;
+      color: var(--muted);
+      margin: 1.5rem 0;
+    }
+    .note strong { color: var(--text); }
+
+    .example-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      font-size: .85rem;
+    }
+    .example-block .label { color: var(--muted); font-size: .8rem; margin-bottom: .4rem; }
+    .example-block a { color: var(--accent); text-decoration: none; word-break: break-all; }
+    .example-block a:hover { text-decoration: underline; }
+
+    footer { text-align: center; margin-top: 3rem; color: var(--muted); font-size: .85rem; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <h1>🗂️ Mock API</h1>
+    <p>A static mock API that mirrors <a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener">jsonplaceholder.typicode.com</a>, served as plain JSON files via GitHub Pages.</p>
+    <span class="badge">✓ No auth required &nbsp;·&nbsp; CORS enabled &nbsp;·&nbsp; Read-only</span>
+  </header>
+
+  <h2>Resources</h2>
+  <div class="resources">
+    <div class="resource-card"><div class="count">100</div><div class="name">posts</div></div>
+    <div class="resource-card"><div class="count">500</div><div class="name">comments</div></div>
+    <div class="resource-card"><div class="count">100</div><div class="name">albums</div></div>
+    <div class="resource-card"><div class="count">5000</div><div class="name">photos</div></div>
+    <div class="resource-card"><div class="count">200</div><div class="name">todos</div></div>
+    <div class="resource-card"><div class="count">10</div><div class="name">users</div></div>
+  </div>
+
+  <div class="note">
+    <strong>How to use:</strong> Append <code>.json</code> to any path below, or use the trailing-slash form (served as <code>index.json</code>).
+    All responses are static JSON — write operations (POST/PUT/DELETE) are <strong>not</strong> supported.
+  </div>
+
+  <h2>Endpoints</h2>
+  <table class="route-table">
+    <thead>
+      <tr>
+        <th>Method</th>
+        <th>Path</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- posts -->
+      <tr><td><span class="method">GET</span></td><td><code>/posts/index.json</code></td><td>All posts (100)</td></tr>
+      <tr><td><span class="method">GET</span></td><td><code>/posts/{id}.json</code></td><td>Single post by id (1–100)</td></tr>
+      <!-- comments -->
+      <tr><td><span class="method">GET</span></td><td><code>/comments/index.json</code></td><td>All comments (500)</td></tr>
+      <tr><td><span class="method">GET</span></td><td><code>/comments/{id}.json</code></td><td>Single comment by id (1–500)</td></tr>
+      <!-- albums -->
+      <tr><td><span class="method">GET</span></td><td><code>/albums/index.json</code></td><td>All albums (100)</td></tr>
+      <tr><td><span class="method">GET</span></td><td><code>/albums/{id}.json</code></td><td>Single album by id (1–100)</td></tr>
+      <!-- photos -->
+      <tr><td><span class="method">GET</span></td><td><code>/photos/index.json</code></td><td>All photos (5000)</td></tr>
+      <tr><td><span class="method">GET</span></td><td><code>/photos/{id}.json</code></td><td>Single photo by id (1–5000)</td></tr>
+      <!-- todos -->
+      <tr><td><span class="method">GET</span></td><td><code>/todos/index.json</code></td><td>All todos (200)</td></tr>
+      <tr><td><span class="method">GET</span></td><td><code>/todos/{id}.json</code></td><td>Single todo by id (1–200)</td></tr>
+      <!-- users -->
+      <tr><td><span class="method">GET</span></td><td><code>/users/index.json</code></td><td>All users (10)</td></tr>
+      <tr><td><span class="method">GET</span></td><td><code>/users/{id}.json</code></td><td>Single user by id (1–10)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Quick Examples</h2>
+
+  <div class="example-block">
+    <div class="label">Fetch all posts</div>
+    <a id="link-posts" href="posts/index.json">posts/index.json</a>
+  </div>
+  <div class="example-block">
+    <div class="label">Fetch post #1</div>
+    <a id="link-post1" href="posts/1.json">posts/1.json</a>
+  </div>
+  <div class="example-block">
+    <div class="label">Fetch user #1</div>
+    <a id="link-user1" href="users/1.json">users/1.json</a>
+  </div>
+  <div class="example-block">
+    <div class="label">Fetch all todos</div>
+    <a id="link-todos" href="todos/index.json">todos/index.json</a>
+  </div>
+
+  <h2>Usage</h2>
+  <div class="example-block">
+    <div class="label">JavaScript / fetch</div>
+    <pre style="margin-top:.5rem;white-space:pre-wrap;color:#c9d1d9">fetch('https://randellqt.github.io/posts/1.json')
+  .then(res => res.json())
+  .then(data => console.log(data));</pre>
+  </div>
+  <div class="example-block">
+    <div class="label">curl</div>
+    <pre style="margin-top:.5rem;white-space:pre-wrap;color:#c9d1d9">curl https://randellqt.github.io/posts/index.json | jq .</pre>
+  </div>
+
+  <footer>
+    <p>Inspired by <a href="https://jsonplaceholder.typicode.com" target="_blank" rel="noopener">JSONPlaceholder</a> &nbsp;·&nbsp;
+       Source on <a href="https://github.com/randellqt/randellqt.github.io" target="_blank" rel="noopener">GitHub</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
