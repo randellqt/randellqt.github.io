@@ -1,0 +1,16 @@
+[
+  {
+    "id": "basketball",
+    "slug": "basketball",
+    "name": "Basketball",
+    "category": "racket",
+    "icon": "pickleball"
+  },
+  {
+    "id": "pickleball",
+    "slug": "pickleball",
+    "name": "Pickleball",
+    "category": "racket",
+    "icon": "pickleball"
+  }
+]
