@@ -1,0 +1,40 @@
+{
+  "id": "basketball",
+  "slug": "basketball",
+  "name": "Basketball",
+  "category": "team_ball",
+  "icon": "basketball",
+  "metadata": {
+    "profileFields": [
+      {
+        "id": "skill_level",
+        "label": "Self Rating",
+        "type": "singleSelect",
+        "options": [
+          {
+            "id": "newbie",
+            "label": "Newbie"
+          },
+          {
+            "id": "beginner",
+            "label": "Beginner"
+          },
+          {
+            "id": "intermediate",
+            "label": "Intermediate"
+          },
+          {
+            "id": "advanced",
+            "label": "Advanced"
+          },
+          {
+            "id": "pro",
+            "label": "Pro"
+          }
+        ]
+      }
+    ]
+  },
+  "is_active": true,
+  "version": 1
+}
