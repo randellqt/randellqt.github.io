@@ -5,11 +5,11 @@
   "category": "team_ball",
   "icon": "basketball",
   "metadata": {
-    "profileFields": [
+    "profile_fields": [
       {
         "id": "skill_level",
         "label": "Self Rating",
-        "type": "singleSelect",
+        "type": "single_select",
         "required": true,
         "options": [
           {

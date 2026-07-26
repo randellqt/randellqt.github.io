@@ -1,7 +1,7 @@
 {
-  "albumId": 1,
+  "album_id": 1,
   "id": 3,
   "title": "Veritatis quisquam magnam consequuntur veritatis quisquam magnam consequuntur",
   "url": "https://via.placeholder.com/600/000003",
-  "thumbnailUrl": "https://via.placeholder.com/150/000003"
+  "thumbnail_url": "https://via.placeholder.com/150/000003"
 }

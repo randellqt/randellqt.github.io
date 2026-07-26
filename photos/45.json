@@ -1,7 +1,7 @@
 {
-  "albumId": 1,
+  "album_id": 1,
   "id": 45,
   "title": "Labore in vel voluptate",
   "url": "https://via.placeholder.com/600/00002d",
-  "thumbnailUrl": "https://via.placeholder.com/150/00002d"
+  "thumbnail_url": "https://via.placeholder.com/150/00002d"
 }
