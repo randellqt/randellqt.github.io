@@ -33,6 +33,29 @@
             "label": "Pro"
           }
         ]
+      },
+      {
+        "id": "preferred_match_categories",
+        "label": "Preferred Categories",
+        "type": "multi_select",
+        "options": [
+          {
+            "id": "singles",
+            "label": "Newbie"
+          },
+          {
+            "id": "gender_doubles",
+            "label": "Gender Doubles"
+          },
+          {
+            "id": "mixed_doubles",
+            "label": "Intermediate"
+          },
+          {
+            "id": "any",
+            "label": "Any"
+          }
+        ]
       }
     ]
   },
