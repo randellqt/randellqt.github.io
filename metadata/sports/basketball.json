@@ -10,6 +10,7 @@
         "id": "skill_level",
         "label": "Self Rating",
         "type": "singleSelect",
+        "required": true,
         "options": [
           {
             "id": "newbie",
