@@ -1,7 +1,7 @@
 {
-  "albumId": 100,
+  "album_id": 100,
   "id": 5000,
   "title": "Dolor eum corporis quae",
   "url": "https://via.placeholder.com/600/001388",
-  "thumbnailUrl": "https://via.placeholder.com/150/001388"
+  "thumbnail_url": "https://via.placeholder.com/150/001388"
 }
